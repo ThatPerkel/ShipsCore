@@ -25,21 +25,21 @@ public class Bounds<N extends Number> {
     }
 
     public boolean contains(int x, int y, int z){
-        if(((int)this.min.getX()) < x){
+        if(((Integer)this.min.getX()) < x){
             return false;
         }
-        if(((int)this.min.getY()) < y){
+        if(((Integer)this.min.getY()) < y){
             return false;
         }
-        if(((int)this.min.getZ()) < z){
+        if(((Integer)this.min.getZ()) < z){
             return false;
         }
-        if(((int)this.max.getX()) > x){
+        if(((Integer)this.max.getX()) > x){
             return false;
         }
-        if(((int)this.max.getY()) > y){
+        if(((Integer)this.max.getY()) > y){
             return false;
         }
-        return ((int) this.max.getZ()) <= z;
+        return ((Integer) this.max.getZ()) <= z;
     }
 }

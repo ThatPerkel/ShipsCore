@@ -54,7 +54,7 @@ public interface ConfigurationStream {
 
     default <T> void set(ConfigurationNode node, StringParser<T> parser, T value){
         if(parser.equals(Parser.STRING_TO_BOOLEAN)){
-            set(node, (boolean)value);
+            set(node, (Boolean)value);
             return;
         }else if(parser.equals(Parser.STRING_TO_DOUBLE)){
             set(node, ((Number)value).doubleValue());
